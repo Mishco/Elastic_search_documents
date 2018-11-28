@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="890.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="controler.HeadController">
+  <children>
+    <BorderPane layoutX="14.0" layoutY="14.0" prefHeight="453.0" prefWidth="672.0">
+      <bottom>
+        <VBox alignment="TOP_LEFT" cache="true" cacheHint="DEFAULT" fillWidth="false" focusTraversable="false" opacity="1.0" prefHeight="22.0" prefWidth="672.0" rotate="0.0" spacing="5.0" visible="true">
+          <children>
+            <HBox prefHeight="22.0" prefWidth="279.0">
+              <children>
+                <TextField fx:id="addFirstName" onKeyPressed="#addPersonKey" prefWidth="200.0" />
+                <Button id="ad" fx:id="addButton" mnemonicParsing="false" onAction="#addPerson" prefHeight="22.0" text="Add" />
+              </children>
+            </HBox>
+          </children>
+        </VBox>
+      </bottom>
+      <center>
+        <TableView fx:id="tablePeople" disable="false" editable="false" focusTraversable="true" onMouseClicked="#clickItem" prefHeight="395.0" prefWidth="672.0" tableMenuButtonVisible="false">
+          <columns>
+            <TableColumn prefWidth="75.0" text="Column X" />
+            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="140.0" text="Column X" />
+          </columns>
+        </TableView>
+      </center>
+      <top>
+        <TextField fx:id="searchField" alignment="CENTER_LEFT" prefWidth="549.0" promptText="search" text="" />
+      </top>
+    </BorderPane>
+    <Accordion layoutX="686.0" layoutY="39.0" prefHeight="428.0">
+      <expandedPane>
+        <TitledPane fx:id="x1" animated="false" text="untitled">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+          </content>
+        </TitledPane>
+      </expandedPane>
+      <panes>
+        <fx:reference source="x1" />
+        <TitledPane animated="false" text="untitled">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+          </content>
+        </TitledPane>
+      </panes>
+    </Accordion>
+  </children>
+</AnchorPane>
